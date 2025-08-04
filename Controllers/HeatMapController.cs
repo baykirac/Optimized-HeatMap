@@ -35,7 +35,7 @@ namespace HeatMap.Controllers
             }
             catch
             {
-                response.Message += Messages.AllDataReturnError;
+                response.Message = Messages.AllDataReturnError;
 
                 return response;
             }

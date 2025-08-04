@@ -77,5 +77,23 @@ namespace HeatMap.ResponseModel {
                 return ResourceManager.GetString("AllDataReturnError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veriler oluşturulup veritabanına yazılırken hata ile karşılaşıldı..
+        /// </summary>
+        public static string FakeDataGeneratedError {
+            get {
+                return ResourceManager.GetString("FakeDataGeneratedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veriler oluşturulup veritabanına başarılı bir şekilde yazıldı..
+        /// </summary>
+        public static string FakeDataGeneratedSuccessfully {
+            get {
+                return ResourceManager.GetString("FakeDataGeneratedSuccessfully", resourceCulture);
+            }
+        }
     }
 }

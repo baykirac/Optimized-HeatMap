@@ -18,6 +18,11 @@ namespace HeatMap.Data.GenericRepository
             await _dbSet.AddAsync(entity);
         }
 
+        public async Task AddRangeAsync(IEnumerable<T> entities)
+        {
+            await _dbSet.AddRangeAsync(entities);
+        }
+
         public void Delete(T entity)
         {
             _dbSet.Remove(entity);

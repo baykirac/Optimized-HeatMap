@@ -123,4 +123,10 @@
   <data name="AllDataReturnError" xml:space="preserve">
     <value>Tüm veriler başarıyla getirilirken hata ile karşılaşıldı.</value>
   </data>
+  <data name="FakeDataGeneratedError" xml:space="preserve">
+    <value>Veriler oluşturulup veritabanına yazılırken hata ile karşılaşıldı.</value>
+  </data>
+  <data name="FakeDataGeneratedSuccessfully" xml:space="preserve">
+    <value>Veriler oluşturulup veritabanına başarılı bir şekilde yazıldı.</value>
+  </data>
 </root>
