@@ -195,3 +195,6 @@ vite.config.ts.timestamp-*
 
 appsettings.Development.json
 appsettings.json
+
+*.vsidx
+*.v2
