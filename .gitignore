@@ -198,3 +198,9 @@ appsettings.json
 
 *.vsidx
 *.v2
+
+*.wsuo
+*.sqlite
+
+DocumentLayout.json
+VSWorkspaceState.json
