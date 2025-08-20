@@ -60,14 +60,6 @@ const MapComponent = () => {
 
   return (
     <div>
-      {/* <div style={{ marginBottom: 10 }}>
-        <button onClick={() => setSelectedLayer("osm")}>OSM</button>
-        <button onClick={() => setSelectedLayer("satellite")}>Satellite</button>
-        <button onClick={() => setSelectedLayer("cartoLight")}>
-          CartoLight
-        </button>
-        <button onClick={() => setSelectedLayer("cartoDark")}>CartoDark</button>
-      </div> */}
       <div ref={mapRef} style={{ width: "100%", height: "95vh" }}></div>
 
     </div>

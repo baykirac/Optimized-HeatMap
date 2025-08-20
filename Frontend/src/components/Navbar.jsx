@@ -3,14 +3,11 @@ import {
   Box,
   Flex,
   HStack,
-  IconButton,
-  Button,
   useDisclosure,
-  Stack,
-  Link,
   Image,
 } from "@chakra-ui/react";
 import LayerControlMenu from "./LayerControlMenu";
+import GeneratePointData from "./GeneratePointData";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,6 +46,7 @@ const Navbar = () => {
             display={{ base: "none", md: "flex" }}
             marginRight={2}
           >
+            <GeneratePointData/>
             <LayerControlMenu/>
           </HStack>
         </Flex>
