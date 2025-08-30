@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import LayerControlMenu from "./LayerControlMenu";
 import GeneratePointData from "./GeneratePointData";
+import PointLayer from "./PointLayer";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -46,6 +47,7 @@ const Navbar = () => {
             display={{ base: "none", md: "flex" }}
             marginRight={2}
           >
+            <PointLayer/>
             <GeneratePointData/>
             <LayerControlMenu/>
           </HStack>

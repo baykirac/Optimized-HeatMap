@@ -22,7 +22,7 @@ const GeneratePointData = () => {
     <HStack>
       <Dialog.Root size="xs">
         <Dialog.Trigger asChild>
-          <Button variant="outline">Point Üret</Button>
+          <Button variant="outline" backgroundColor={"white"}>Point Üret</Button>
         </Dialog.Trigger>
         <Portal>
           <Dialog.Backdrop />

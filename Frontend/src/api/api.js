@@ -50,7 +50,7 @@ const api = {
 function parseApiResponse(response) {
   const success = response.data.success;
   const message = response.data.message;
-  const data = response.data.body;
+  const data = response.data.data;
 
   return {
     success,
