@@ -10,13 +10,13 @@ const MapComponent = () => {
   const mapRef = useRef();
   const mapInstance = useRef(null);
 
-  const {setMap, selectedLayer, setSelectedLayer} = useContext(Context);
+  const { setMap, selectedLayer, setSelectedLayer } = useContext(Context);
 
   const extentTurkey = [
-    fromLonLat([25.7, 35.8])[0],
-    fromLonLat([25.7, 35.8])[1],
-    fromLonLat([44.0, 42.1])[0],
-    fromLonLat([44.0, 42.1])[1],
+    fromLonLat([24.0, 34.5])[0],
+    fromLonLat([24.0, 34.5])[1],
+    fromLonLat([46.0, 43.5])[0],
+    fromLonLat([46.0, 43.5])[1],
   ];
 
   useEffect(() => {
@@ -61,7 +61,6 @@ const MapComponent = () => {
   return (
     <div>
       <div ref={mapRef} style={{ width: "100%", height: "95vh" }}></div>
-
     </div>
   );
 };

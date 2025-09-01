@@ -3,8 +3,7 @@ import Context from "@/context/Context";
 import { Switch, SwitchLabel } from "@chakra-ui/react";
 import { Tooltip } from "@/components/ui/tooltip";
 import pointApi from "@/api/pointApi";
-import { Style, Circle as CircleStyle, Fill, Stroke } from "ol/style";
-import { Vector as VectorLayer } from "ol/layer";
+import { Heatmap as HeatmapLayer } from "ol/layer";
 import { Vector as VectorSource } from "ol/source";
 import WKT from "ol/format/WKT";
 
@@ -21,7 +20,6 @@ const PointLayer = () => {
 
   const fetchPoints = async () => {
     await pointApi.GetAllPoints().then((response) => {
-      debugger;
       if (response.success) {
         setPointCount(response.data.length);
         if (response.data.length != pointCount) {
@@ -34,22 +32,20 @@ const PointLayer = () => {
               dataProjection: "EPSG:4326",
               featureProjection: "EPSG:3857",
             });
+            feature.set("weight", 0.1);
             vectorSource.addFeature(feature);
           });
 
-          const vectorLayer = new VectorLayer({
+          const heatmapLayer = new HeatmapLayer({
             source: vectorSource,
-            style: new Style({
-              image: new CircleStyle({
-                radius: 4,
-                fill: new Fill({ color: "blue" }),
-                stroke: new Stroke({ color: "white", width: 2 }),
-              }),
-            }),
+            blur: 15,
+            radius: 8,
+            weight: (feature) => feature.get("weight"),
           });
-          setPointLayer(vectorLayer);
+
+          setPointLayer(heatmapLayer);
           setPointCount(response.data.length);
-          map.addLayer(vectorLayer);
+          map.addLayer(heatmapLayer);
         } else if (response.data.length == pointCount) {
           map.addLayer(pointLayer);
         }
