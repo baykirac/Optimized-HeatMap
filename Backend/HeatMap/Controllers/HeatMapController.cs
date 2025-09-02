@@ -40,5 +40,26 @@ namespace HeatMap.Controllers
                 return response;
             }
         }
+
+        [HttpGet]
+        public async Task<Response> ExportKML()
+        {
+            var response = new Response();
+
+            try
+            {
+                response.Success = await objectService.CreateKMLFile();
+
+                response.Message = Messages.KMLFileCreatedSuccessfully;
+
+                return response;
+            }
+            catch
+            {
+                response.Message = Messages.KMLFileCreatedError;
+
+                return response;
+            }
+        }
     }
 }

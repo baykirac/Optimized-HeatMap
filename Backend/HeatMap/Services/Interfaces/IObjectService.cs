@@ -6,5 +6,6 @@ namespace HeatMap.Services.Interfaces
     public interface IObjectService
     {
         Task<IEnumerable<Object>> GetAllAsync();
+        Task<bool> CreateKMLFile();
     }
 }

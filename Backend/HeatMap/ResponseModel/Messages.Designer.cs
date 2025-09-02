@@ -95,5 +95,23 @@ namespace HeatMap.ResponseModel {
                 return ResourceManager.GetString("FakeDataGeneratedSuccessfully", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KML dosyası oluşturulurken hata ile karşılaşıldı..
+        /// </summary>
+        public static string KMLFileCreatedError {
+            get {
+                return ResourceManager.GetString("KMLFileCreatedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KML dosyası başarıyla oluşturuldu..
+        /// </summary>
+        public static string KMLFileCreatedSuccessfully {
+            get {
+                return ResourceManager.GetString("KMLFileCreatedSuccessfully", resourceCulture);
+            }
+        }
     }
 }

@@ -129,4 +129,10 @@
   <data name="FakeDataGeneratedSuccessfully" xml:space="preserve">
     <value>Veriler oluşturulup veritabanına başarılı bir şekilde yazıldı.</value>
   </data>
+  <data name="KMLFileCreatedError" xml:space="preserve">
+    <value>KML dosyası oluşturulurken hata ile karşılaşıldı.</value>
+  </data>
+  <data name="KMLFileCreatedSuccessfully" xml:space="preserve">
+    <value>KML dosyası başarıyla oluşturuldu.</value>
+  </data>
 </root>
